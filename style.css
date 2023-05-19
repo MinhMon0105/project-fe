@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.itemFirst {
+  position: relative;
+  margin: 50px;
+  height: 200px;
+  width: 500px;
+  border-radius: 20px;
+  display: flex;
+  animation: alternate;
+  background-image: url("src/Assets/Images/ForYou/image1.jpg");
+}
+
+.title {
+  margin: 20px 20px;
+  font-size: 50px;
+  color: white;
+}
+
+.button {
+  background-color: rgba(240, 237, 233, 0.3);
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.icon {
+  color: white;
+}
