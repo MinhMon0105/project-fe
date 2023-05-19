@@ -1,0 +1,23 @@
+.Music__item {
+  width: 200px;
+  height: 200px;
+  .Music__item--image {
+    img {
+      overflow: hidden;
+      border-radius: 20px;
+    }
+  }
+  .Music__item--title {
+    margin-top: 15px;
+    p {
+      margin: 0;
+    }
+    .name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .author {
+      color: rgb(102, 101, 101);
+    }
+  }
+}
