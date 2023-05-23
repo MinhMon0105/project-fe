@@ -4,21 +4,46 @@ import appleMusicItem2 from "../../Assets/Images/Item/apple-music-item-2.jpg"
 import appleMusicItem3 from "../../Assets/Images/Item/apple-music-item-3.jpg"
 import appleMusicItem4 from "../../Assets/Images/Item/apple-music-item-4.jpg"
 import appleMusicItem5 from "../../Assets/Images/Item/apple-music-item-5.jpg"
-
 import Component from '../../Core/Component';
 
 const listImage = [appleMusicItem1, appleMusicItem2, appleMusicItem3, appleMusicItem4, appleMusicItem5]
 
-console.log(listImage);
-
 export default class Item extends Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      isHover: false
+    }
+
+    // document.addEventListener('mouseover', (e) => {
+    //   e.preventDefault()
+    //   this.handleHoverItem()
+    // })
+    // document.addEventListener('mouseout', (e) => {
+    //   e.preventDefault()
+    //   this.handlerOutHoverItem()
+    // })
   }
 
-  render() {
+  // handleHoverItem = (e) => {
+  //   if (!this.state.isHover) {
+  //     this.setState({
+  //       isHover: true
+  //     })
+  //   }
+  // }
 
+  // handlerOutHoverItem = (e) => {
+  //   if (this.state.isHover) {
+  //     this.setState({
+  //       isHover: false
+  //     })
+  //   }
+  // }
+
+
+
+  render() {
     return this.html`
       <div class="row">
         <div class="col">

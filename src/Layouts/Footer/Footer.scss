@@ -1,0 +1,47 @@
+.footer {
+  padding: 10px;
+  background-color: hsla(0, 0%, 100%, 0.98);
+  position: fixed;
+  bottom: 0;
+  right: 120px;
+  left: 100px;
+  height: 80px;
+  .footer__info {
+    display: flex;
+    &--image {
+      width: 60px;
+      height: 60px;
+      img {
+        border-radius: 10px;
+      }
+    }
+    &--title {
+      margin-left: 10px;
+      .music__name {
+        font-weight: 600;
+        margin-bottom: 9px;
+      }
+    }
+    &--heart {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+  }
+  .footer__button {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    span {
+      margin: 20px;
+    }
+  }
+  .footer__control {
+    font-size: 20px;
+    text-align: end;
+    margin: 10px;
+
+    span {
+      margin: 10px;
+    }
+  }
+}

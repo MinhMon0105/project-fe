@@ -1,6 +1,7 @@
 .Music__item {
   width: 200px;
   height: 200px;
+  position: relative;
   .Music__item--image {
     img {
       overflow: hidden;
@@ -18,6 +19,24 @@
     }
     .author {
       color: rgb(102, 101, 101);
+    }
+  }
+  .hover {
+    position: absolute;
+    right: 5rem;
+    bottom: 5rem;
+    background-color: hsla(0, 0%, 100%, 0.14);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.54);
+    }
+    span {
+      color: white;
     }
   }
 }

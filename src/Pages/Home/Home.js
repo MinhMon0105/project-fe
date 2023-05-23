@@ -3,6 +3,8 @@ import Component from "../../Core/Component";
 import Item from "../../Components/Item/Item";
 import Artists from "../../Components/ItemArtists/Artists";
 import './Home.scss'
+import ItemForYou from "../../Components/ItemForYou/ItemForYou";
+import Header from "../../Layouts/Header/Header";
 
 export default class Home extends Component {
   constructor() {
@@ -14,9 +16,10 @@ export default class Home extends Component {
   render() {
     const item = this.compile(Item)
     const artists = this.compile(Artists)
-
+    const forYou = this.compile(ItemForYou)
     return this.html`
-      <div class = "container">
+      <div class = "Home">
+
         <div class = "AppleMusic">
           <h2>By Apple Music</h2>
           ${item}
@@ -28,22 +31,32 @@ export default class Home extends Component {
             <div>${item}</div>
         </div>
 
-        <div class="Artists">
+        <div class = "ForYou">
+          <h2>For You</h2>
+          <div>${forYou}</div>
+        </div>
+
+        <div class = "Artists">
           <h2>Recommended Artists</h2>
             <div class = "Artists__item">
               <div> ${artists}</div>
             </div>
         </div>
 
-        <div class ="LatestAlbums">
+        <div class = "LatestAlbums">
           <h2>Latest Albums</h2>
-          <div>${item}</div>
+          <div class = "LatestAlbumsItem">
+            <div>${item}</div>
+          </div>
         </div>
 
-        <div class ="Charts">
+        <div class = 'Charts'>
           <h2>Charts</h2>
-          <div>${item}</div>
+          <div>
+            ${item}
+          </div>
         </div>
+
       </div>
     `
   }

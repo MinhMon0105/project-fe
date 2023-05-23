@@ -1,5 +1,6 @@
 import Component from "../../Core/Component";
 import defaultAvatar from "../../Assets/Images/default_avatar.jpg";
+import "./Header.scss"
 
 export default class Header extends Component {
   constructor() {
