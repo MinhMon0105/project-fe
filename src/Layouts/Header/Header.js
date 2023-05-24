@@ -6,8 +6,8 @@ export default class Header extends Component {
   constructor() {
     super();
     this.state = {
-      isFocusSearch: false,
       isShowAccount: false,
+      isFocusSearch: false,
     };
 
     document.addEventListener("click", () => {
@@ -95,10 +95,10 @@ export default class Header extends Component {
               </div>
             </form>
             <div class ='header__right--account'>
-              <span onclick = "${this.handleToggle}">
+              <span onclick=" ${this.handleToggle}">
                 <img src="${defaultAvatar}"></img>
               </span>
-              <div class=" account ${isShowAccount && "show"}">
+              <div class="account ${isShowAccount && "show"}">
                 <ul>
                   <li>
                     <a href="">

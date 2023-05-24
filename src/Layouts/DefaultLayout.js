@@ -5,7 +5,6 @@ import Navigo from "navigo";
 import { publicRoute } from "../Routes/publicRoute";
 import { protectedRoute } from "../Routes/protectedRoute";
 import { Error404 } from "../Errors/Error404";
-import Home from "../Pages/Home/Home";
 
 export default class DefaultLayout extends Component {
   render() {

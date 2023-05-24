@@ -7,7 +7,6 @@ import DefaultLayout from "./Layouts/DefaultLayout";
 export default class App extends Component {
   render = () => {
     const layout = this.compile(DefaultLayout);
-
     return layout;
   };
 }

@@ -3,6 +3,14 @@ import img from "../../Assets/Images/author/author-2.jpg"
 import "./Footer.scss"
 
 export default class Footer extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    };
+  }
+
+
   render() {
     return this.html`
     <footer class = "footer">
@@ -35,7 +43,7 @@ export default class Footer extends Component {
             <span><i class="fas fa-random"></i></span>
             <span><i class="fa fa-volume-down"></i></span>
             <input type="range"></input>
-            <span><i class="fa-solid fa-angle-up"></i></span>
+            <span class="angle"><i class="fa-solid fa-angle-up"></i></sp>
           </div>
         </div>
       </div>

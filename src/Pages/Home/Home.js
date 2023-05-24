@@ -4,7 +4,7 @@ import Item from "../../Components/Item/Item";
 import Artists from "../../Components/ItemArtists/Artists";
 import './Home.scss'
 import ItemForYou from "../../Components/ItemForYou/ItemForYou";
-import Header from "../../Layouts/Header/Header";
+
 
 export default class Home extends Component {
   constructor() {
@@ -18,6 +18,7 @@ export default class Home extends Component {
     const artists = this.compile(Artists)
     const forYou = this.compile(ItemForYou)
     return this.html`
+
       <div class = "Home">
 
         <div class = "AppleMusic">

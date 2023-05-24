@@ -1,6 +1,7 @@
+import Home from "../Pages/Home/Home";
+import Library from "../Pages/Library/Library";
 
-import { AuthMiddleware } from "../Middlewares/AuthMiddleware";
-
-export const protectedRoute = {
-
+export const publicRoute = {
+  "/": Home,
+  "/bai-hat": Library
 };

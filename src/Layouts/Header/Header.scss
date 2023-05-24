@@ -1,5 +1,5 @@
 .header {
-  padding: 15px 0;
+  padding: 20px;
   position: fixed;
   right: 80px;
   left: 100px;
@@ -72,14 +72,14 @@
         }
       }
       .account {
-        display: block;
         position: absolute;
         padding: 15px 20px;
         border: 1px solid rgb(235, 229, 229);
-        border-radius: 10px;
-        display: none;
+        border-radius: 15px;
+        display: block;
         background-color: #f9f9fa;
-        z-index: 1;
+        z-index: 10;
+        display: none;
         ul {
           padding-left: 0;
           margin-bottom: 0;
@@ -87,7 +87,7 @@
             padding: 10px;
             &:hover {
               background-color: #d8dff7;
-              border-radius: 5px;
+              border-radius: 10px;
             }
             a {
               display: flex;

@@ -1,36 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+import Component from "../../Core/Component";
+import "./Song.css"
+import image from "../../Assets/Images/author/author-2.jpg"
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-  <div class="player">
-    <div class="wrapper">
-      <div class="details">
-        <div class="track-art">
-          <img src="/src/Assets/Images/author/author-3.jpg" class="track-art-image">
-        </div>
-        <div class="content">
-          <div class="title">
-            <div class="track-name">Track Name</div>
-            <div class="track-artist">Track Artist</div>
+export default class Song extends Component {
+  render() {
+    return this.html`
+    <div class="player">
+      <div class="wrapper">
+        <div class="details">
+          <div class="track-art">
+            <img src="${image}" class="track-art-image">
           </div>
-          <div class="heart">
-            <span><i class="fa-regular fa-heart"></i></span>
+          <div class="content">
+            <div class="title">
+              <div class="track-name">Track Name</div>
+              <div class="track-artist">Track Artist</div>
+            </div>
+            <div class="heart">
+              <span><i class="fa-regular fa-heart"></i></span>
+            </div>
           </div>
         </div>
-      </div>
 
       <div class="slider_container timer">
         <div class="current-time">00:00</div>
@@ -102,8 +92,6 @@
     </div>
     </p>
   </div>
-
-
-</body>
-
-</html>
+    `
+  }
+}

@@ -43,5 +43,12 @@
     span {
       margin: 10px;
     }
+    .angle {
+      padding: 5px;
+      border-radius: 7px;
+    }
+    .angle:hover {
+      background-color: rgb(230, 227, 222);
+    }
   }
 }
