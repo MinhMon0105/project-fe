@@ -3,68 +3,67 @@ import defaultAvatar from "../../Assets/Images/default_avatar.jpg";
 import "./Header.scss"
 
 export default class Header extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isShowAccount: false,
-      isFocusSearch: false,
+    constructor() {
+        super();
+        this.state = {
+            isShowAccount: false,
+            isFocusSearch: false,
+        };
+
+        document.addEventListener("click", () => {
+            this.handleFocusOutInput();
+            this.handleHideAccount();
+        });
+
+        document.addEventListener("keyup", (e) => {
+            if (e.key === "Escape") {
+                this.handleHideAccount();
+            }
+        });
+    }
+
+    // handle Input
+    handleFocusOutInput = () => {
+        if (this.state.isFocusSearch) {
+            this.setState({
+                isFocusSearch: false,
+            });
+        }
     };
 
-    document.addEventListener("click", () => {
-      this.handleFocusOutInput();
-      this.handleHideAccount();
-    });
+    handleFocusInput = (e) => {
+        e.stopPropagation();
+        if (!this.state.isFocusSearch) {
+            this.setState({
+                isFocusSearch: true,
+            });
+        }
+    };
+    // handle input end
 
-    document.addEventListener("keyup", (e) => {
-      if (e.key === "Escape") {
-        this.handleHideAccount();
-      }
-    });
-  }
+    // handle Toggle Account
+    handleToggle = (e) => {
+        e.stopPropagation();
+        this.setState({
+            isShowAccount: !this.state.isShowAccount,
+        });
+    };
 
-  // handle Input
-  handleFocusOutInput = () => {
-    if (this.state.isFocusSearch) {
-      this.setState({
-        isFocusSearch: false,
-      });
-    }
-  };
+    handleHideAccount = () => {
+        if (this.state.isShowAccount) {
+            this.setState({
+                isShowAccount: false,
+            });
+        }
+    };
+    // handle Toggle Account end
 
-  handleFocusInput = (e) => {
-    e.stopPropagation();
-    if (!this.state.isFocusSearch) {
-      this.setState({
-        isFocusSearch: true,
-      });
-    }
-  };
-  // handle input end
+    render() {
+        const { isFocusSearch, isShowAccount } = this.state
 
-  // handle Toggle Account
-  handleToggle = (e) => {
-    e.stopPropagation();
-    this.setState({
-      isShowAccount: !this.state.isShowAccount,
-    });
-  };
-
-  handleHideAccount = () => {
-    if (this.state.isShowAccount) {
-      this.setState({
-        isShowAccount: false,
-      });
-    }
-  };
-  // handle Toggle Account end
-
-  render() {
-    const { isFocusSearch, isShowAccount } = this.state
-
-    return this.html`
+        return this.html `
     <header class="header">
       <div class="row">
-
         <div class="col-3">
           <div class="header__nav">
             <span>
@@ -75,7 +74,6 @@ export default class Header extends Component {
             </span>
           </div>
         </div>
-
         <div class="col-6">
           <nav class="header__menu">
             <ul>
@@ -85,7 +83,6 @@ export default class Header extends Component {
             </ul>
           </nav>
         </div>
-
         <div class="col-3">
           <div class="header__right">
             <form class ='header__right--search'>
@@ -126,5 +123,5 @@ export default class Header extends Component {
       </div>
     </header>
     `;
-  }
+    }
 }

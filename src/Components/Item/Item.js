@@ -9,42 +9,42 @@ import Component from '../../Core/Component';
 const listImage = [appleMusicItem1, appleMusicItem2, appleMusicItem3, appleMusicItem4, appleMusicItem5]
 
 export default class Item extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isHover: false
+    constructor() {
+        super();
+        this.state = {
+            isHover: false
+        }
+
+        // document.addEventListener('mouseover', (e) => {
+        //   e.preventDefault()
+        //   this.handleHoverItem()
+        // })
+        // document.addEventListener('mouseout', (e) => {
+        //   e.preventDefault()
+        //   this.handlerOutHoverItem()
+        // })
     }
 
-    // document.addEventListener('mouseover', (e) => {
-    //   e.preventDefault()
-    //   this.handleHoverItem()
-    // })
-    // document.addEventListener('mouseout', (e) => {
-    //   e.preventDefault()
-    //   this.handlerOutHoverItem()
-    // })
-  }
+    // handleHoverItem = (e) => {
+    //   if (!this.state.isHover) {
+    //     this.setState({
+    //       isHover: true
+    //     })
+    //   }
+    // }
 
-  // handleHoverItem = (e) => {
-  //   if (!this.state.isHover) {
-  //     this.setState({
-  //       isHover: true
-  //     })
-  //   }
-  // }
-
-  // handlerOutHoverItem = (e) => {
-  //   if (this.state.isHover) {
-  //     this.setState({
-  //       isHover: false
-  //     })
-  //   }
-  // }
+    // handlerOutHoverItem = (e) => {
+    //   if (this.state.isHover) {
+    //     this.setState({
+    //       isHover: false
+    //     })
+    //   }
+    // }
 
 
 
-  render() {
-    return this.html`
+    render() {
+        return this.html `
       <div class="row">
         <div class="col">
           <div class="Music__item">
@@ -103,5 +103,5 @@ export default class Item extends Component {
         </div>
       </div>
   `;
-  }
+    }
 }

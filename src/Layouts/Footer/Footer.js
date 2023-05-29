@@ -3,16 +3,16 @@ import img from "../../Assets/Images/author/author-2.jpg"
 import "./Footer.scss"
 
 export default class Footer extends Component {
-  constructor() {
-    super();
-    this.state = {
+    constructor() {
+        super();
+        this.state = {
 
-    };
-  }
+        };
+    }
 
 
-  render() {
-    return this.html`
+    render() {
+        return this.html `
     <footer class = "footer">
       <div class ="row">
         <div class ="col-4">
@@ -21,8 +21,8 @@ export default class Footer extends Component {
               <img src = "${img}"></img>
             </div>
             <div class = "footer__info--title">
-              <p href="" class ="music__name">Bloom</p>
-              <p href="" class = "music__author">Dia Frampton</p>
+              <p href="" class ="music__name">Happiness</p>
+              <p href="" class = "music__author">Jonh K</p>
             </div>
             <div class = "footer__info--heart">
               <span><i class="fa-regular fa-heart"></i></span>
@@ -49,7 +49,5 @@ export default class Footer extends Component {
       </div>
     </footer>
     `
-  }
+    }
 }
-
-

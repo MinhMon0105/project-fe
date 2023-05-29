@@ -7,17 +7,16 @@ import ItemForYou from "../../Components/ItemForYou/ItemForYou";
 
 
 export default class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
+    constructor() {
+        super();
+        this.state = {}
     }
-  }
 
-  render() {
-    const item = this.compile(Item)
-    const artists = this.compile(Artists)
-    const forYou = this.compile(ItemForYou)
-    return this.html`
+    render() {
+        const item = this.compile(Item)
+        const artists = this.compile(Artists)
+        const forYou = this.compile(ItemForYou)
+        return this.html `
 
       <div class = "Home">
 
@@ -60,5 +59,5 @@ export default class Home extends Component {
 
       </div>
     `
-  }
+    }
 }

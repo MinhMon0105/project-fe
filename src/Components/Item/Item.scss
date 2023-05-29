@@ -1,42 +1,41 @@
 .Music__item {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  .Music__item--image {
-    img {
-      overflow: hidden;
-      border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    .Music__item--image {
+        img {
+            overflow: hidden;
+            border-radius: 20px;
+        }
     }
-  }
-  .Music__item--title {
-    margin-top: 15px;
-    p {
-      margin: 0;
+    .Music__item--title {
+        margin-top: 15px;
+        p {
+            margin: 0;
+        }
+        .name {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .author {
+            color: rgb(102, 101, 101);
+        }
     }
-    .name {
-      font-size: 20px;
-      font-weight: 700;
+    .hover {
+        position: absolute;
+        right: 5rem;
+        bottom: 5rem;
+        background-color: hsla(0, 0%, 100%, 0.14);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        &:hover {
+            background-color: hsla(0, 0%, 100%, 0.54);
+        }
+        span {
+            color: white;
+        }
     }
-    .author {
-      color: rgb(102, 101, 101);
-    }
-  }
-  .hover {
-    position: absolute;
-    right: 5rem;
-    bottom: 5rem;
-    background-color: hsla(0, 0%, 100%, 0.14);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    &:hover {
-      background-color: hsla(0, 0%, 100%, 0.54);
-    }
-    span {
-      color: white;
-    }
-  }
 }

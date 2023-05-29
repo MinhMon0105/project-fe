@@ -1,24 +1,24 @@
 import './ExploreCom.scss';
-import appleMusicItem1 from "../../Assets/Images/Item/apple-music-item-1.jpg"
-import appleMusicItem2 from "../../Assets/Images/Item/apple-music-item-2.jpg"
-import appleMusicItem3 from "../../Assets/Images/Item/apple-music-item-3.jpg"
-import appleMusicItem4 from "../../Assets/Images/Item/apple-music-item-4.jpg"
-import appleMusicItem5 from "../../Assets/Images/Item/apple-music-item-5.jpg"
+import pic6 from "../../Assets/Images/playlist/pic-6.jpg"
+import pic7 from "../../Assets/Images/playlist/pic-7.jpg"
+import pic8 from "../../Assets/Images/playlist/pic-8.jpg"
+import pic9 from "../../Assets/Images/playlist/pic-9.jpg"
+import pic10 from "../../Assets/Images/playlist/pic-10.jpg"
 import Component from '../../Core/Component';
 
-const listImage = [appleMusicItem1, appleMusicItem2, appleMusicItem3, appleMusicItem4, appleMusicItem5]
+const listImage = [pic6, pic7, pic8, pic9, pic10]
 
 export default class ExploreCom extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isHover: false
+    constructor() {
+        super();
+        this.state = {
+            isHover: false
+        }
     }
-  }
 
 
-  render() {
-    return this.html`
+    render() {
+        return this.html `
       <div class="row">
         <div class="col">
           <div class="Music__item">
@@ -77,5 +77,5 @@ export default class ExploreCom extends Component {
         </div>
       </div>
   `;
-  }
+    }
 }
